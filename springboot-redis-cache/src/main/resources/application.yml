@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: RedisCache
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/emp
+    username: root
+    password: Root@123
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+  cache:
+    type: redis
+
+  redis:
+    host: localhost
+    port: 6379
+
+logging:
+  level:
+    org.springframework.cache: DEBUG
+    org.springframework.data.redis: DEBUG
